@@ -14,8 +14,8 @@ export class CarouselComponent implements OnInit {
 
   ngOnInit(): void {
     this.contentfulService.getCarousel()
-    .then(carousels => {this.carousels = carousels;
-      console.log(this.carousels);
+    .then(carousels => {this.carousels = carousels; 
+      
     });
   }
 

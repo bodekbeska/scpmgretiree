@@ -17,22 +17,37 @@ export class ContentfulService {
 
   constructor() { }
 
+  getMainMenu(query?: object): Promise<Entry<any>[]> {
+    return this.client.getEntries(Object.assign({
+      content_type:'mainmenu'
+    }, query))
+    .then(res => res.items);    
+  }
+
   getCarousel(query?: object): Promise<Entry<any>[]> {
     return this.client.getEntries(Object.assign({
       content_type:'carousel'
     }, query))
-    .then(res => res.items);
-    
+    .then(res => res.items);    
   }
 
+  getBenefits(query?: object): Promise<Entry<any>[]> {
+    return this.client.getEntries(Object.assign({
+      content_type:'benefits'
+    }, query))
+    .then(res => res.items);    
+  }
 
-
-
-
-  getLiving(query?: object): Promise<Entry<any>> {
-    return this.client.getEntry('2A7M4G46JxSGf9PzSiABvV')
+  getPage(pageId): Promise<Entry<any>> {
+    console.log("pageid" + pageId);
+    return this.client.getEntry(pageId)
     .then(res => res);
   }
+
+
+
+
+
   getContactUs(query?: object): Promise<Entry<any>> {
     return this.client.getEntry('4LnMS2qBP6yEZ8tctRWGcD')
     .then(res => res);

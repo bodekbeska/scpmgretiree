@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
 
     this.contentfulService.getWelcomeMessage()
     .then(welcome => {this.welcome = welcome;
-    console.log(this.welcome);
+    
     })
 
 
