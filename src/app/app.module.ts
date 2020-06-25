@@ -16,6 +16,8 @@ import { BenefitsComponent } from './benefits/benefits.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HeaderComponent } from './header/header.component';
 import { PageDetailsComponent } from './page-details/page-details.component';
+import { EventsComponent } from './events/events.component';
+import { MdToHtmlPipe } from './md-to-html.pipe';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { PageDetailsComponent } from './page-details/page-details.component';
     BenefitsComponent,
     PageNotFoundComponent,
     HeaderComponent,
-    PageDetailsComponent
+    PageDetailsComponent,
+    EventsComponent,
+    MdToHtmlPipe
   ],
   imports: [
     BrowserModule,

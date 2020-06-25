@@ -1,7 +1,24 @@
 
-  <div class="container">
-    <h5 class="display-4">{{content.fields.title}}</h5>
-     <div [innerHtml]="content.fields.content | richtextToHtml"></div>
+  <div class="container" *ngIf="content">
+    <!-- <h5 class="display-4">{{content.fields.title}}</h5>
+     <div [innerHtml]="content.fields.content | richtextToHtml"></div> -->
+
+     <br>
+
+     <div class="card mb-3">
+      <img *ngIf="content.fields.image" [src]="content.fields.image.fields.file.url" class="card-img" alt="...">
+      <div *ngIf="content.fields.image" class="card-img-overlay text-white">
+        <h5 class="card-title">{{content.fields.title}}</h5>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{content.fields.title}}</h5>
+        <div *ngIf="content.fields.content" [innerHtml]="content.fields.content | richtextToHtml"></div>
+        <div *ngIf="content.fields.mdcontent" [innerHtml]="content.fields.mdcontent | mdToHtml"></div>
+      </div>
+    </div>
+
+
+
 </div>
 
 

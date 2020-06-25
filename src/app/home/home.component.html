@@ -24,11 +24,11 @@
   </div>
 <br>
   <br>
-<div class="jumbotron jumbotron-fluid" *ngIf="welcome">
+<div class="jumbotron jumbotron-fluid" *ngIf="welcome" id="welcome">
 
   <div class="container">
     <div class="media">
-      <img [src]="welcome.fields.photo.fields.file.url" class="align-self-start mr-3" alt="...">
+      <img [src]="welcome.fields.photo.fields.file.url" class="align-self-start mr-3 " alt="Ellison">
       <div class="media-body">
         <h5 class="mt-0">{{welcome.fields.title}}</h5>
         <div [innerHtml]="welcome.fields.richtext | richtextToHtml"></div> 

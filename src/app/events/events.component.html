@@ -1,0 +1,25 @@
+<div class="container">
+ <br>
+<div *ngIf="verbiage" [innerHtml]="verbiage.fields.richtext | richtextToHtml"></div>
+<div *ngIf="verbiage" [innerHtml]="verbiage.fields.content | mdToHtml"></div>
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Location</th>
+        <th scope="col">Contact</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let e of events">
+        <th scope="row">{{e.fields.date | date}}</th>
+        <td>{{e.fields.location}}</td>
+        <td> <div [innerHtml]= "e.fields.contact | mdToHtml"></div> </td>   
+      </tr>
+    
+    </tbody>
+  </table>
+
+</div>

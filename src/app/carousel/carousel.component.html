@@ -12,7 +12,10 @@
       <div class="carousel-caption d-none d-md-block">
         <h1>{{c.fields.title}}</h1>
         <p>{{c.fields.description}}</p>
-        <button type="button" class="btn btn-primary">Click Here</button>
+        <div *ngIf="c.fields.buttontext; else default"> <a class="btn btn-primary" routerLink="{{c.fields.link}}" role="button">{{c.fields.buttontext}}</a> </div>
+        <ng-template #default>
+          <a class="btn btn-primary" routerLink="{{c.fields.link}}" role="button">Click Here</a> 
+        </ng-template>
       </div>
     </div>
     

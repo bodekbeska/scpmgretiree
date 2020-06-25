@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -38,8 +39,7 @@ export class ContentfulService {
     .then(res => res.items);    
   }
 
-  getPage(pageId): Promise<Entry<any>> {
-    console.log("pageid" + pageId);
+  getPage(pageId): Promise<Entry<any>> {  
     return this.client.getEntry(pageId)
     .then(res => res);
   }
@@ -54,6 +54,20 @@ export class ContentfulService {
   }
   getWelcomeMessage(query?: object): Promise<Entry<any>> {
     return this.client.getEntry('2HdffBnQqiOoVi2mbli0gq')
+    .then(res => res);
+  }
+
+
+  
+  getEvents(query?: object): Promise<Entry<any>[]> {
+    return this.client.getEntries(Object.assign({
+      content_type:'events'
+    }, query))
+    .then(res => res.items);    
+  }
+
+  getEventsVerbiage(query?: object): Promise<Entry<any>> {    
+    return this.client.getEntry('62vgCxi8ldTxjSRRjjJYcg')
     .then(res => res);
   }
 

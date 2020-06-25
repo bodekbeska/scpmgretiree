@@ -11,7 +11,8 @@ import { Entry } from 'contentful';
 export class PageDetailsComponent implements OnInit {
   id: string;
   content: Entry<any>;
-  constructor(private route: ActivatedRoute, private contentfulService: ContentfulService) { 
+  constructor(private route: ActivatedRoute, 
+    private contentfulService: ContentfulService) { 
 
   }
 

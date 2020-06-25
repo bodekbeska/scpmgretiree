@@ -5,16 +5,17 @@
     <div class="container">
         <div class="row">
           <div class="col-sm" *ngIf="contactus">
-            <h2>{{contactus.fields.title}}</h2>
-            <div [innerHtml]="contactus.fields.richtext | richtextToHtml"></div>
+            <h3>{{contactus.fields.title}}</h3>
+            <!-- <div [innerHtml]="contactus.fields.richtext | richtextToHtml"></div> -->
+            <div [innerHtml]="contactus.fields.content | mdToHtml"></div>
 
           </div>
           <div class="col-sm">
-            <h2>Connect wit Us</h2>
+            <h3>Connect with Us</h3>
             <div class="row">
-                <div class="col-sm"><h1><a class="social" href=""><i class="fab fa-facebook"></i></a></h1></div>
-                <div class="col-sm"> <h1><a class="social" href=""><i class="fab fa-twitter"></i></a></h1></div>
-                <div class="col-sm"> <h1><a class="social" href=""> <i class="fab fa-youtube"></i></a> </h1></div>
+                <div class="col-sm"><h1 class="display-4"><a class="social" href="http://www.facebook.com/kpthrive"><i class="fab fa-facebook"></i></a></h1></div>
+                <div class="col-sm"> <h1 class="display-4"><a class="social" href="http://www.twitter.com/KPNewsCenter"><i class="fab fa-twitter"></i></a></h1></div>
+                <div class="col-sm"> <h1 class="display-4"><a class="social" href="http://www.youtube.com/kaiserpermanenteorg"> <i class="fab fa-youtube"></i></a> </h1></div>
             </div>
 
             
@@ -24,7 +25,7 @@
           </div>
           
         </div>
-
+<hr>
         <span class="text-muted text-center font-weight-lighter" style="font-size: 0.8rem;">Copyright © 2012 - 2020 KFHP, Inc. All rights reserved. This site was produced in collaboration with SCPMG Permanente Human Resources & Southern California Integrated Brand Communications.</span>
       </div>
 </footer>
