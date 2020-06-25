@@ -10,7 +10,7 @@
     <div class="picsum-img-wrapper"> <img [src]="c.fields.img.fields.file.url" class="d-block w-100" alt="..."></div> 
     
       <div class="carousel-caption d-none d-md-block">
-        <h1>{{c.fields.title}}</h1>
+        <h1 class="display-2">{{c.fields.title}}</h1>
         <p>{{c.fields.description}}</p>
         <div *ngIf="c.fields.buttontext; else default"> <a class="btn btn-primary" routerLink="{{c.fields.link}}" role="button">{{c.fields.buttontext}}</a> </div>
         <ng-template #default>
