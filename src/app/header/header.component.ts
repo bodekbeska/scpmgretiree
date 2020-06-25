@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   constructor(private contentfulService: ContentfulService) { }
 
   ngOnInit(): void {
+
     this.contentfulService.getBenefits()
     .then(links => {this.benlinks = links;     
     });

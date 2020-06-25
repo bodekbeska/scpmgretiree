@@ -2,6 +2,6 @@
     color: #eaf4ff;
 }
 
-p{
-    margin-bottom: 8rem;
+.footercontainer{
+    max-width: 1440px;
 }

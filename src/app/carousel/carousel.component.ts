@@ -14,7 +14,10 @@ export class CarouselComponent implements OnInit {
 
   ngOnInit(): void {
     this.contentfulService.getCarousel()
-    .then(carousels => {this.carousels = carousels; 
+    .then(carousels => {
+      carousels.sort((a,b) => (a.fields.orderid > b.fields.orderid)? 1 :-1);  
+      this.carousels = carousels; 
+      
       
     });
   }

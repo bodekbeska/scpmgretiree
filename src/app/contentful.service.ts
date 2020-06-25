@@ -20,10 +20,18 @@ export class ContentfulService {
 
   getMainMenu(query?: object): Promise<Entry<any>[]> {
     return this.client.getEntries(Object.assign({
-      content_type:'mainmenu'
+      content_type:'mainmenu'    
     }, query))
     .then(res => res.items);    
   }
+
+  // getMainMenu1(query?: object): Promise<Entry<any>[]> {
+  //   return this.client.getEntries(Object.assign({
+  //     content_type:'mainmenu',
+  //     select: ['fields.title']
+  //   }, query))
+  //   .then(res => res.items);    
+  // }
 
   getCarousel(query?: object): Promise<Entry<any>[]> {
     return this.client.getEntries(Object.assign({
