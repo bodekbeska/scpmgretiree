@@ -18,6 +18,7 @@ import { HeaderComponent } from './header/header.component';
 import { PageDetailsComponent } from './page-details/page-details.component';
 import { EventsComponent } from './events/events.component';
 import { MdToHtmlPipe } from './md-to-html.pipe';
+import { ConnectComponent } from './connect/connect.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { MdToHtmlPipe } from './md-to-html.pipe';
     HeaderComponent,
     PageDetailsComponent,
     EventsComponent,
-    MdToHtmlPipe
+    MdToHtmlPipe,
+    ConnectComponent
   ],
   imports: [
     BrowserModule,

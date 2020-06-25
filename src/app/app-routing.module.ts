@@ -5,6 +5,7 @@ import { BenefitsComponent } from './benefits/benefits.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PageDetailsComponent } from './page-details/page-details.component';
 import { EventsComponent } from './events/events.component';
+import { ConnectComponent } from './connect/connect.component';
 
 
 const routes: Routes = [
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: 'mybenefits/:id',
     component: BenefitsComponent
+  },
+  {
+    path: 'connect/:id',
+    component: ConnectComponent
   },
   {
     path: 'myretirement/:id',

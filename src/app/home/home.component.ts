@@ -16,8 +16,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
 
     this.contentfulService.getWelcomeMessage()
-    .then(welcome => {this.welcome = welcome;
-    
+    .then(welcome => {this.welcome = welcome;    
     })
 
 

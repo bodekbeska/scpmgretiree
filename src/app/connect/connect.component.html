@@ -1,0 +1,14 @@
+
+<div class="jumbotron jumbotron-fluid" *ngIf="content" id="welcome">
+
+    <div class="container">
+      <div class="media">
+        <img [src]="content.fields.photo.fields.file.url" class="align-self-start mr-3 " alt="...">
+        <div class="media-body">
+          <h5 class="mt-0">{{content.fields.title}}</h5>
+          <div [innerHtml]="content.fields.richtext | richtextToHtml"></div> 
+        </div>
+      </div>
+    </div>
+    
+  </div>
