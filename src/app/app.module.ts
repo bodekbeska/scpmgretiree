@@ -19,6 +19,7 @@ import { PageDetailsComponent } from './page-details/page-details.component';
 import { EventsComponent } from './events/events.component';
 import { MdToHtmlPipe } from './md-to-html.pipe';
 import { ConnectComponent } from './connect/connect.component';
+import { TellusComponent } from './tellus/tellus.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ConnectComponent } from './connect/connect.component';
     PageDetailsComponent,
     EventsComponent,
     MdToHtmlPipe,
-    ConnectComponent
+    ConnectComponent,
+    TellusComponent
   ],
   imports: [
     BrowserModule,

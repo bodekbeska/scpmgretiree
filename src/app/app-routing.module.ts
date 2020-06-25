@@ -6,6 +6,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { PageDetailsComponent } from './page-details/page-details.component';
 import { EventsComponent } from './events/events.component';
 import { ConnectComponent } from './connect/connect.component';
+import { TellusComponent } from './tellus/tellus.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,10 @@ const routes: Routes = [
   {
     path: 'events',
     component: EventsComponent
+  },
+  {
+    path: 'tellus',
+    component: TellusComponent
   },
   {
     path: 'mybenefits/:id',
