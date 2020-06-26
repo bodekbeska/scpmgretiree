@@ -22,6 +22,7 @@ export class TellusComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log(this.contactForm.value.name);
     const body = new HttpParams()
     .set('form-name', 'contact')
     .append('name', this.contactForm.value.name)
