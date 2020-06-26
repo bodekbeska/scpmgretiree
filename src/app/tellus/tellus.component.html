@@ -3,7 +3,7 @@
 <div class="card">
     <div class="card-body">
 
-        <form [formGroup]="contactForm" (ngSubmit)="onSubmit(myForm)" name="contact" id='contact-form' method="post" >
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" name="contact" id='contact-form' method="post"  >
             <p style='display: none;'>
                 <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
               </p>
