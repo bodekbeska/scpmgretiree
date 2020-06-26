@@ -12,9 +12,9 @@ import { TellusComponent } from './tellus/tellus.component';
 const routes: Routes = [
   {
     path: '',
-    component: TellusComponent
-    // redirectTo:'home',
-    // pathMatch: 'full'   
+    //component: TellusComponent
+     redirectTo:'home',
+     pathMatch: 'full'   
   },
   {
     path: 'home',    

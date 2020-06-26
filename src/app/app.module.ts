@@ -20,6 +20,8 @@ import { EventsComponent } from './events/events.component';
 import { MdToHtmlPipe } from './md-to-html.pipe';
 import { ConnectComponent } from './connect/connect.component';
 import { TellusComponent } from './tellus/tellus.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { TellusComponent } from './tellus/tellus.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule,
+    HttpClientModule
     
   ],
   providers: [ContentfulService],
