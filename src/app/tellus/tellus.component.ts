@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
  import { FormGroup, FormControl, FormBuilder, Form } from '@angular/forms';
  import { HttpClient, HttpParams, HttpErrorResponse } from '@angular/common/http';
+ import { ContentfulService } from '../contentful.service';
+import { Entry } from 'contentful';
 
 @Component({
   selector: 'app-tellus',
@@ -9,16 +11,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TellusComponent implements OnInit {
   contactForm: FormGroup;
-
-   constructor(private http: HttpClient, private fb: FormBuilder ) { 
+  tellus: Entry<any> = null;
+   constructor(private http: HttpClient, private fb: FormBuilder, 
+    private contentfulService: ContentfulService ) { 
     this.contactForm = this.fb.group({
       name:'',
       email:'',
-      message:''
+      phone:'',
+      medcenter:'',
+      retirementyear:'',
+      sharing:''
     });
   }
 
   ngOnInit(): void {
+    this.contentfulService.getPage('82tRwBbsYilF4j20FoT9y')
+    .then(tellus => {this.tellus = tellus;  
+        console.log(this.tellus)
+    })
   }
 
   onSubmit() {

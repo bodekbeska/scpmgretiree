@@ -2,16 +2,50 @@
 <br>
 <div class="card">
     <div class="card-body">
+     
+<div *ngIf="tellus">
+        <div [innerHtml]="tellus.fields.richtext | richtextToHtml"></div> 
+        
+      </div>
+    
+
 
         <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" name="contact" id='contact-form' method="post"  >
             <p style='display: none;'>
                 <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
               </p>
             <input type="hidden" name="form-name" value="contact" /> 
-            <input formControlName="name" placeholder="Your name" name="name"> <br>
-            <input formControlName="email" placeholder="Your email" name="email">    <br>        
-            <textarea  formControlName="message" placeholder="Your message" name="message"></textarea>
-          
+            
+            <div class="form-group ">
+              <label for="name">Name</label>
+              <input formControlName="name" type="text" class="form-control" id="name" >              
+            </div>
+           
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input formControlName="phone" type="text" class="form-control" id="phone" >              
+            </div>
+
+            <div class="form-group">
+              <label for="medcenter">Former Location / Medical Center:</label>
+              <input formControlName="medcenter" type="text" class="form-control" id="medcenter" >              
+            </div>
+            
+            <div class="form-group">
+              <label for="retirementyear">Year of Retirement</label>
+              <input formControlName="retirementyear" type="text" class="form-control" id="retirementyear" >              
+            </div>
+
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Briefly share how you are enjoying your retirement</label>
+              <textarea formControlName="sharing" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
             <button class="btn btn-primary" type="submit">Send</button>
           </form>
         
