@@ -36,7 +36,10 @@ export class TellusComponent implements OnInit {
     .set('form-name', 'contact')
     .append('name', this.contactForm.value.name)
     .append('email', this.contactForm.value.email)   
-    .append('message', this.contactForm.value.message)
+    .append('phone', this.contactForm.value.message)
+    .append('medcenter', this.contactForm.value.name)
+    .append('retirementyear', this.contactForm.value.email)   
+    .append('sharing', this.contactForm.value.message)
     this.http.post('/', body.toString(), {headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}).subscribe(
       res => {},
       err => {
