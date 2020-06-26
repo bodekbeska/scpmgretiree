@@ -2,10 +2,12 @@
 <br>
     
 
+
+
       <div class="row">
 
         <div class="col-sm">          
-            <div class="card" style="width: 28rem;" *ngIf="tellus">
+            <div class="card" style="width:100%;" *ngIf="tellus">
               <img [src]="tellus.fields.photo.fields.file.url" class="card-img-top" alt="...">
               <div class="card-body">
                 <div [innerHtml]="tellus.fields.richtext | richtextToHtml"></div>  
@@ -13,6 +15,10 @@
             </div>
         </div>
         <div class="col-sm">
+          <iframe src="../../../assets/tellus.html" frameborder="0" scrolling="no" height="100%"></iframe>
+        </div>
+        <!-- <div class="col-sm">
+
           <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" name="contact" id='contact-form' method="post"  >
             <p style='display: none;'>
                 <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
@@ -51,7 +57,7 @@
             </div>
             <button class="btn btn-primary" type="submit">Send</button>
           </form>
-        </div>       
+        </div>        -->
       </div>
 
        

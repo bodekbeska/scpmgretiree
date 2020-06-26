@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <form name="gen" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+  <!-- <form name="gen" method="POST" netlify-honeypot="bot-field" data-netlify="true">
     <p class="hidden">
       <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
     </p>
@@ -19,19 +11,44 @@
     <p>
       <button type="submit">Send</button>
     </p>
-  </form>
+  </form> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-  <form name="nick" method="POST" data-netlify-recaptcha="true" data-netlify="true">
-    <p>
-      <label>Email: <input type="text" name="name" /></label>
-    </p>
-    <p>
-      <label>Message: <textarea name="message"></textarea></label>
-    </p>
+
+  <form name="tellus" method="POST" data-netlify-recaptcha="true" data-netlify="true">
+    <div class="form-group ">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" >              
+    </div>
+   
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input  type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input  type="text" class="form-control" id="phone" >              
+    </div>
+
+    <div class="form-group">
+      <label for="medcenter">Former Location / Medical Center:</label>
+      <input  type="text" class="form-control" id="medcenter" >              
+    </div>
+    
+    <div class="form-group">
+      <label for="retirementyear">Year of Retirement</label>
+      <input  type="text" class="form-control" id="retirementyear" >              
+    </div>
+
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Briefly share how you are enjoying your retirement</label>
+      <textarea  class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    
     <div data-netlify-recaptcha="true"></div>
     <p>
-      <button type="submit">Send</button>
+      <button class="btn btn-primary" type="submit">Send</button>
     </p>
   </form>
-</body>
-</html>
