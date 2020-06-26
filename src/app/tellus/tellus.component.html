@@ -1,16 +1,19 @@
 <div class="container">
 <br>
-<div class="card">
-    <div class="card-body">
-     
-<div *ngIf="tellus">
-        <div [innerHtml]="tellus.fields.richtext | richtextToHtml"></div> 
-        
-      </div>
     
 
+      <div class="row">
 
-        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" name="contact" id='contact-form' method="post"  >
+        <div class="col-sm">          
+            <div class="card" style="width: 28rem;" *ngIf="tellus">
+              <img [src]="tellus.fields.photo.fields.file.url" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div [innerHtml]="tellus.fields.richtext | richtextToHtml"></div>  
+              </div>
+            </div>
+        </div>
+        <div class="col-sm">
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" name="contact" id='contact-form' method="post"  >
             <p style='display: none;'>
                 <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
               </p>
@@ -48,9 +51,11 @@
             </div>
             <button class="btn btn-primary" type="submit">Send</button>
           </form>
-        
-    </div>
-</div>
+        </div>       
+      </div>
+
+       
+
 <br>
 
-</div>
+</div><br>

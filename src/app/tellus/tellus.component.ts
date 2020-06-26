@@ -26,8 +26,7 @@ export class TellusComponent implements OnInit {
 
   ngOnInit(): void {
     this.contentfulService.getPage('82tRwBbsYilF4j20FoT9y')
-    .then(tellus => {this.tellus = tellus;  
-        console.log(this.tellus)
+    .then(tellus => {this.tellus = tellus;          
     })
   }
 
