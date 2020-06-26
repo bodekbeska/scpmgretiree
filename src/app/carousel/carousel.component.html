@@ -7,10 +7,10 @@
   </ol>
   <div class="carousel-inner">  
     <div class="carousel-item" [class.active]="i === 0" *ngFor="let c of carousels; let i = index">
-    <!-- <div class="picsum-img-wrapper"> 
+    <div class="picsum-img-wrapper"> 
       <img [src]="c.fields.img.fields.file.url" class="d-block w-100" alt="...">
-    </div>  -->
-    <img [src]="c.fields.img.fields.file.url" class="d-block w-100" alt="...">
+    </div> 
+    <!-- <img [src]="c.fields.img.fields.file.url" class="d-block w-100 figure-img img-fluid"  alt="..."> -->
       <div class="carousel-caption d-none d-md-block">
         <h1 class="display-3">{{c.fields.title}}</h1>
         <p>{{c.fields.description}}</p>

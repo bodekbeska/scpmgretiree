@@ -18,15 +18,6 @@ ngb-carousel .picsum-img-wrapper {
   }
 
   .carousel-caption {
-    /* position: absolute;    
-    top: 120px;
-    left: 15%;
-    z-index: 10;
-    padding-top: 20px; 
-    padding-bottom: 90px;
-    color: #fff;
-    text-align: left;
-    width: 500px; */
     position: absolute;    
     top: 120px;
     left: 15%;
@@ -36,17 +27,18 @@ ngb-carousel .picsum-img-wrapper {
     color: #fff;
     text-align: left;
     width: 500px;
+    
 }
 
 .picsum-img-wrapper {
-    position: relative;
-    height: 0;
-    padding-top: 30%;  /* Keep ratio for 900x500 images */
+    position: relative;    
+    padding-top: 36%;  /* Keep ratio for 900x500 images */
+   
   }
   
 .picsum-img-wrapper>img {
     position: absolute;
-    top: 1;
+    top: -10;
     left: 0;
     bottom: 0;
     right: 0;
